@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "780730220454",
+    "project_id": "bantay-bakuna",
+    "storage_bucket": "bantay-bakuna.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780730220454:android:01e003d8ff7edf374bd967",
+        "android_client_info": {
+          "package_name": "com.example.bantaybakuna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780730220454-bm8o8mpvikerq87e3v6c4uik8015ab70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmbOfsvXdWuNfb7yEfAOuzbZmyxyRiYa4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780730220454-bm8o8mpvikerq87e3v6c4uik8015ab70.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

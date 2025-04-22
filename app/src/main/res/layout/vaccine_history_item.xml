@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    android:layout_marginBottom="8dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#FFFBEA"> <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/imageViewHistoryIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_vaccine_placeholder"            android:contentDescription="@string/vaccine_icon_desc"
+        app:tint="#A1887F"            app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewHistoryVaccineName"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewHistoryDate" />
+
+    <TextView
+        android:id="@+id/textViewHistoryVaccineName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"             android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#6D4C41"             app:layout_constraintStart_toEndOf="@+id/imageViewHistoryIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDeleteLogItem"
+        tools:text="Pentavalent Vaccine (Dose 1)"/>
+
+    <TextView
+        android:id="@+id/textViewHistoryDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="#795548"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewHistoryVaccineName"
+        app:layout_constraintStart_toStartOf="@+id/textViewHistoryVaccineName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHistoryVaccineName"
+        tools:text="Date: January 15, 2024" />
+
+    <TextView
+        android:id="@+id/textViewHistoryOptionalBatch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#DD2C00"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/textViewHistoryDate"
+        app:layout_constraintStart_toStartOf="@+id/textViewHistoryDate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHistoryDate"
+        tools:text="Batch: #ABC123"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewHistoryOptionalClinic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#DD2C00"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/textViewHistoryOptionalBatch"
+        app:layout_constraintStart_toStartOf="@+id/textViewHistoryOptionalBatch"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHistoryOptionalBatch"
+        tools:text="Clinic: Health Center XYZ"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/buttonDeleteLogItem"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/delete_vaccine_log_desc"
+        android:src="@android:drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#BA2C0F" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

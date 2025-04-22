@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_vaccine_placeholder" />
+    <drawable name="ic_notification_icon" />
+    <drawable name="edittext_border_warm" />
+</resources>

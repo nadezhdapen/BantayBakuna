@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEF3E0"     tools:context=".UserProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#CD7B4C"             app:title="Your Profile"
+            app:titleTextColor="#FFCD74"             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageViewProfilePic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/profile_picture_placeholder"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayoutProfile" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutProfileName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/display_name"
+        app:boxStrokeColor="#A1887F"
+        app:hintTextColor="#8D6E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePic"
+        app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+        app:startIconTint="#492D2D">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextProfileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName|textCapWords"
+            android:textColor="#6D4C41"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutProfileEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/email_cannot_change"
+        app:boxStrokeColor="#A1887F"
+        app:hintTextColor="#8D6E63"
+        app:layout_constraintEnd_toEndOf="@+id/inputLayoutProfileName"
+        app:layout_constraintStart_toStartOf="@+id/inputLayoutProfileName"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutProfileName"
+        app:startIconDrawable="@android:drawable/sym_action_email"
+        app:startIconTint="#8D6E63">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextProfileEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:focusable="false"
+            android:inputType="textEmailAddress"
+            android:longClickable="false"
+            android:textColor="#A1887F" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutProfilePhone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/phone_number"
+        app:boxStrokeColor="#A1887F"
+        app:hintTextColor="#8D6E63"
+        app:layout_constraintEnd_toEndOf="@+id/inputLayoutProfileEmail"
+        app:layout_constraintStart_toStartOf="@+id/inputLayoutProfileEmail"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutProfileEmail"
+        app:startIconDrawable="@android:drawable/stat_sys_phone_call"
+        app:startIconTint="#8D6E63">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextProfilePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:textColor="#6D4C41"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutProfileAge"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/age"
+        app:boxStrokeColor="#A1887F"
+        app:hintTextColor="#8D6E63"
+        app:layout_constraintEnd_toEndOf="@+id/inputLayoutProfilePhone"
+        app:layout_constraintStart_toStartOf="@+id/inputLayoutProfilePhone"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutProfilePhone"
+        app:startIconDrawable="@android:drawable/ic_menu_info_details"
+        app:startIconTint="#59443E">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextProfileAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="#6D4C41"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/buttonSaveProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"
+        android:text="@string/edit_profile"
+        android:textSize="16sp"
+        app:backgroundTint="#EF6C00"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:text="@string/logout_sign_out"
+        android:textColor="#BF360C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#D84315" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

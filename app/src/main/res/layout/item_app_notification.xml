@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/box"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/textViewNotificationMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#4E342E"
+        android:textSize="15sp"
+        tools:text="Pentavalent Vaccine (Dose 1) scheduled around Apr 25" />
+
+    <TextView
+        android:id="@+id/textViewNotificationTimestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#A1887F"
+        android:textSize="12sp"
+        tools:text="April 22, 2025 10:30 AM" />
+
+</LinearLayout>

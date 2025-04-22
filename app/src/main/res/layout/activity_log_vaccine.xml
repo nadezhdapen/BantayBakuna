@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FEF3E0"    tools:context=".LogVaccineActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarLogVaccine"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#CD7B4C"         app:title="Log / Schedule Vaccine"
+        app:titleTextColor="#FFCD74"         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/textViewLogForChildName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#8D6E63"
+                android:textAlignment="center"
+                android:layout_marginBottom="24dp"
+                tools:text="Logging vaccine for: Child Name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vaccine_name"                 android:textColor="#6D4C41"/>
+
+            <Spinner
+                android:id="@+id/spinnerVaccineName"
+                style="@android:style/Widget.Spinner.DropDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/material_dynamic_tertiary99"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_administered_scheduled"                 android:textColor="#6D4C41"/>
+
+            <TextView
+                android:id="@+id/textViewLogSelectedDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/common_google_signin_btn_text_light_normal_background"
+                android:backgroundTint="@color/white"
+                android:hint="@string/select_date_administered_hint"
+                android:padding="16dp"
+                android:textColor="#6D4C41"
+                android:textSize="18sp" />             <Button
+            android:id="@+id/buttonLogSelectDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_date_button"
+            android:layout_gravity="center_horizontal"
+            app:backgroundTint="#BB5858"                 android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_optional"                 android:textColor="#6D4C41"/>
+
+            <TextView
+                android:id="@+id/textViewLogSelectedTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/common_google_signin_btn_text_light_normal_background"
+                android:hint="Tap button to set time (defaults to now)"
+                android:padding="16dp"
+                android:textColor="#6D4C41"
+                android:textSize="18sp" />
+            <Button
+            android:id="@+id/buttonLogSelectTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_time"
+            android:layout_gravity="center_horizontal"
+            app:backgroundTint="#CC7D40"                 android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Batch Number (Optional):" />
+            <EditText
+                android:id="@+id/editTextBatchNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter batch number"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#A1887F"                 android:importantForAutofill="no" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clinic / Doctor (Optional):" />
+            <EditText
+                android:id="@+id/editTextClinicDoctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter clinic or doctor name"
+                android:inputType="textPersonName|textCapWords"
+                android:minHeight="48dp"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="#A1887F"                 android:importantForAutofill="no" />
+
+            <Button
+                android:id="@+id/buttonLogSaveVaccine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Entry"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:layout_marginTop="16dp"
+                app:backgroundTint="#BA2C0F" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

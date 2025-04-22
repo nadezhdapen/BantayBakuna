@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:layout_marginBottom="2dp"
+    android:background="#FFFFFF">
+
+    <View
+        android:id="@+id/viewStatusColor"
+        android:layout_width="6dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        android:background="@color/status_future"         tools:background="@color/status_upcoming"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewStatusVaccineName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#4E342E"             tools:text="Pentavalent Vaccine (Dose 1)" />
+
+        <TextView
+            android:id="@+id/textViewStatusInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#795548"             tools:text="Status: UPCOMING | Due: May 10 - Jun 10" />
+
+        <TextView
+            android:id="@+id/textViewStatusMilestone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="#A1887F"             android:textStyle="italic"
+            tools:text="(Milestone: 6 Weeks)" />
+    </LinearLayout>
+</LinearLayout>

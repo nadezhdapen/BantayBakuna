@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="status_done">#4CAF50</color>     <color name="status_upcoming">#FF9800</color> <color name="status_missed">#F44336</color>    <color name="status_future">#9E9E9E</color>    <color name="warm_background">#FEF3E0</color>
+    <color name="warm_brown_dark">#6D4C41</color>
+    <color name="warm_brown_medium">#8D6E63</color>
+    <color name="warm_brown_light">#A1887F</color>
+    <color name="warm_orange_dark">#EF6C00</color>
+    <color name="warm_orange_medium">#FFB74D</color>
+    <color name="warm_cream">#FFFBEA</color>
+    <color name="warm_red">#BA2C0F</color> <color name="warm_yellow_text">#FFCD74</color>
+</resources>
